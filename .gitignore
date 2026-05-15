@@ -1,0 +1,17 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+.cache/
+.netlify/
+.env
+.env.local
+.vscode/
+.idea/
+
+# Preview screenshots (auto-generated)
+_preview*.png
+_gallery*.png
+_home.png
+screenshots/

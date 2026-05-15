@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Il trucco del 9</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="top">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="brand-name" data-i18n="brand">Trucco del 9</span>
+    </div>
+    <div class="progress">
+      <div class="pill-row" id="pill-row">
+        <button class="pill" data-step="1">1</button>
+        <button class="pill" data-step="2">2</button>
+        <button class="pill" data-step="3">3</button>
+        <button class="pill" data-step="4">4</button>
+        <button class="pill" data-step="5">5</button>
+        <button class="pill" data-step="6">6</button>
+        <button class="pill" data-step="7">7</button>
+        <button class="pill" data-step="8">8</button>
+        <button class="pill" data-step="9">9</button>
+        <button class="pill" data-step="10">10</button>
+      </div>
+    </div>
+    <div class="top-right">
+      <div class="lang-switch" id="lang-switch">
+        <button class="lang-btn" data-lang="it">IT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <button class="help-btn" id="help-btn" data-i18n-title="help_title" title="Come funziona">?</button>
+    </div>
+  </header>
+
+  <main class="stage">
+
+    <section class="hands-wrap">
+      <svg id="hands" viewBox="0 0 1000 740" xmlns="http://www.w3.org/2000/svg" aria-label="Disegno animato di due mani con 10 dita">
+        <defs>
+          <radialGradient id="palmGrad" cx="50%" cy="60%" r="60%">
+            <stop offset="0%"  stop-color="#fde0c0"/>
+            <stop offset="65%" stop-color="#f5c89e"/>
+            <stop offset="100%" stop-color="#d49a6a"/>
+          </radialGradient>
+          <linearGradient id="fingerGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"  stop-color="#fde0c0"/>
+            <stop offset="40%" stop-color="#fbcfa3"/>
+            <stop offset="100%" stop-color="#dba377"/>
+          </linearGradient>
+          <linearGradient id="nailGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#ffeed8"/>
+            <stop offset="100%" stop-color="#f0c89c"/>
+          </linearGradient>
+          <linearGradient id="bentFingerGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"  stop-color="#cdd3dc"/>
+            <stop offset="100%" stop-color="#94a3b8"/>
+          </linearGradient>
+          <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+            <feOffset dx="0" dy="4" result="offsetblur"/>
+            <feComponentTransfer><feFuncA type="linear" slope="0.30"/></feComponentTransfer>
+            <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- LEFT HAND -->
+        <g class="hand left" filter="url(#softShadow)">
+          <path class="palm" d="M 70,470 Q 60,360 110,330 L 250,310 Q 320,310 330,360 L 330,500 Q 320,580 245,590 L 130,590 Q 65,580 70,470 Z" fill="url(#palmGrad)" stroke="#a87650" stroke-width="2.5"/>
+          <path d="M 120,420 Q 200,440 290,425" stroke="#b88460" stroke-width="1.5" fill="none" opacity="0.5"/>
+          <path d="M 130,470 Q 220,485 295,470" stroke="#b88460" stroke-width="1.3" fill="none" opacity="0.4"/>
+          <path d="M 200,520 Q 220,560 245,575" stroke="#b88460" stroke-width="1.2" fill="none" opacity="0.4"/>
+
+          <g class="finger" id="finger-1" data-num="1">
+            <rect class="finger-body" x="85" y="170" width="42" height="170" rx="20" ry="20"/>
+            <line class="knuckle" x1="89" y1="225" x2="123" y2="225" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <line class="knuckle" x1="89" y1="275" x2="123" y2="275" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <ellipse class="nail" cx="106" cy="183" rx="13" ry="10"/>
+          </g>
+
+          <g class="finger" id="finger-2" data-num="2">
+            <rect class="finger-body" x="133" y="130" width="44" height="200" rx="21" ry="21"/>
+            <line class="knuckle" x1="137" y1="190" x2="173" y2="190" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <line class="knuckle" x1="137" y1="250" x2="173" y2="250" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <ellipse class="nail" cx="155" cy="142" rx="14" ry="11"/>
+          </g>
+
+          <g class="finger" id="finger-3" data-num="3">
+            <rect class="finger-body" x="183" y="100" width="44" height="225" rx="21" ry="21"/>
+            <line class="knuckle" x1="187" y1="170" x2="223" y2="170" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <line class="knuckle" x1="187" y1="230" x2="223" y2="230" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <ellipse class="nail" cx="205" cy="112" rx="14" ry="11"/>
+          </g>
+
+          <g class="finger" id="finger-4" data-num="4">
+            <rect class="finger-body" x="233" y="130" width="44" height="200" rx="21" ry="21"/>
+            <line class="knuckle" x1="237" y1="190" x2="273" y2="190" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <line class="knuckle" x1="237" y1="250" x2="273" y2="250" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <ellipse class="nail" cx="255" cy="142" rx="14" ry="11"/>
+          </g>
+
+          <g class="finger thumb" id="finger-5" data-num="5">
+            <g transform="rotate(40, 325, 430)">
+              <rect class="finger-body" x="305" y="280" width="48" height="160" rx="22" ry="22"/>
+              <line class="knuckle" x1="310" y1="345" x2="348" y2="345" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+              <ellipse class="nail" cx="329" cy="295" rx="15" ry="11"/>
+            </g>
+          </g>
+        </g>
+
+        <!-- RIGHT HAND -->
+        <g class="hand right" filter="url(#softShadow)">
+          <path class="palm" d="M 930,470 Q 940,360 890,330 L 750,310 Q 680,310 670,360 L 670,500 Q 680,580 755,590 L 870,590 Q 935,580 930,470 Z" fill="url(#palmGrad)" stroke="#a87650" stroke-width="2.5"/>
+          <path d="M 710,420 Q 800,440 880,425" stroke="#b88460" stroke-width="1.5" fill="none" opacity="0.5"/>
+          <path d="M 705,470 Q 780,485 870,470" stroke="#b88460" stroke-width="1.3" fill="none" opacity="0.4"/>
+          <path d="M 755,520 Q 780,560 800,575" stroke="#b88460" stroke-width="1.2" fill="none" opacity="0.4"/>
+
+          <g class="finger thumb" id="finger-6" data-num="6">
+            <g transform="rotate(-40, 675, 430)">
+              <rect class="finger-body" x="647" y="280" width="48" height="160" rx="22" ry="22"/>
+              <line class="knuckle" x1="652" y1="345" x2="690" y2="345" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+              <ellipse class="nail" cx="671" cy="295" rx="15" ry="11"/>
+            </g>
+          </g>
+
+          <g class="finger" id="finger-7" data-num="7">
+            <rect class="finger-body" x="723" y="130" width="44" height="200" rx="21" ry="21"/>
+            <line class="knuckle" x1="727" y1="190" x2="763" y2="190" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <line class="knuckle" x1="727" y1="250" x2="763" y2="250" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <ellipse class="nail" cx="745" cy="142" rx="14" ry="11"/>
+          </g>
+
+          <g class="finger" id="finger-8" data-num="8">
+            <rect class="finger-body" x="773" y="100" width="44" height="225" rx="21" ry="21"/>
+            <line class="knuckle" x1="777" y1="170" x2="813" y2="170" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <line class="knuckle" x1="777" y1="230" x2="813" y2="230" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <ellipse class="nail" cx="795" cy="112" rx="14" ry="11"/>
+          </g>
+
+          <g class="finger" id="finger-9" data-num="9">
+            <rect class="finger-body" x="823" y="130" width="44" height="200" rx="21" ry="21"/>
+            <line class="knuckle" x1="827" y1="190" x2="863" y2="190" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <line class="knuckle" x1="827" y1="250" x2="863" y2="250" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <ellipse class="nail" cx="845" cy="142" rx="14" ry="11"/>
+          </g>
+
+          <g class="finger" id="finger-10" data-num="10">
+            <rect class="finger-body" x="873" y="170" width="42" height="170" rx="20" ry="20"/>
+            <line class="knuckle" x1="877" y1="225" x2="911" y2="225" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <line class="knuckle" x1="877" y1="275" x2="911" y2="275" stroke="#b88460" stroke-width="1.2" opacity="0.6"/>
+            <ellipse class="nail" cx="894" cy="183" rx="13" ry="10"/>
+          </g>
+        </g>
+
+        <g id="finger-labels">
+          <text class="finger-num" data-for="1"  x="106" y="155">1</text>
+          <text class="finger-num" data-for="2"  x="155" y="115">2</text>
+          <text class="finger-num" data-for="3"  x="205" y="85">3</text>
+          <text class="finger-num" data-for="4"  x="255" y="115">4</text>
+          <text class="finger-num" data-for="5"  x="395" y="225">5</text>
+          <text class="finger-num" data-for="6"  x="605" y="225">6</text>
+          <text class="finger-num" data-for="7"  x="745" y="115">7</text>
+          <text class="finger-num" data-for="8"  x="795" y="85">8</text>
+          <text class="finger-num" data-for="9"  x="845" y="115">9</text>
+          <text class="finger-num" data-for="10" x="894" y="155">10</text>
+        </g>
+
+        <g id="finger-names">
+          <text class="finger-name" data-for="1"  x="106" y="130"></text>
+          <text class="finger-name" data-for="2"  x="155" y="90"></text>
+          <text class="finger-name" data-for="3"  x="205" y="60"></text>
+          <text class="finger-name" data-for="4"  x="255" y="90"></text>
+          <text class="finger-name" data-for="5"  x="395" y="200"></text>
+          <text class="finger-name" data-for="6"  x="605" y="200"></text>
+          <text class="finger-name" data-for="7"  x="745" y="90"></text>
+          <text class="finger-name" data-for="8"  x="795" y="60"></text>
+          <text class="finger-name" data-for="9"  x="845" y="90"></text>
+          <text class="finger-name" data-for="10" x="894" y="130"></text>
+        </g>
+
+        <g id="brackets"></g>
+      </svg>
+    </section>
+
+    <aside class="info">
+      <div class="info-top">
+        <div class="step-chip"><span class="step-now" id="step-label">1</span><span class="step-total">/ 10</span></div>
+        <div class="bent-tag" id="bent-tag">
+          <span class="bent-tag-icon">✕</span>
+          <span class="bent-tag-text" id="bent-tag-text"></span>
+        </div>
+      </div>
+      <div class="equation-wrap">
+        <div class="equation-big" id="equation-big">
+          <span class="eq-left">9 × 1</span>
+          <span class="eq-eq">=</span>
+          <span class="eq-result" id="eq-result">9</span>
+        </div>
+        <div class="equation-mini" id="equation-mini">0 + 9</div>
+      </div>
+      <div class="breakdown">
+        <div class="bd-row tens">
+          <span class="bd-dot"></span>
+          <span class="bd-label" data-i18n="tens">Decine</span>
+          <span class="bd-value" id="bd-tens">0</span>
+        </div>
+        <div class="bd-row ones">
+          <span class="bd-dot"></span>
+          <span class="bd-label" data-i18n="ones">Unità</span>
+          <span class="bd-value" id="bd-ones">9</span>
+        </div>
+      </div>
+      <div class="check" id="check"></div>
+    </aside>
+
+  </main>
+
+  <footer class="dock">
+    <button id="btn-rewind" data-i18n-title="rewind" title="Inizio" aria-label="Inizio">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M5 5h2v14H5zm14 14L9 12l10-7z"/></svg>
+    </button>
+    <button id="btn-prev" data-i18n-title="prev" title="Precedente" aria-label="Precedente">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M15.5 5l-7 7 7 7V5z"/></svg>
+    </button>
+    <button id="btn-playpause" class="play" data-i18n-title="playpause" title="Play / Pausa" aria-label="Play / Pausa">
+      <svg id="play-svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+      <svg id="pause-svg" viewBox="0 0 24 24" width="24" height="24" style="display:none"><path fill="currentColor" d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+    </button>
+    <button id="btn-next" data-i18n-title="next" title="Successivo" aria-label="Successivo">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M8.5 5v14l7-7-7-7z"/></svg>
+    </button>
+    <button id="btn-end" data-i18n-title="end" title="Fine" aria-label="Fine">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M17 5h2v14h-2zM5 5l10 7L5 19z"/></svg>
+    </button>
+
+    <div class="divider"></div>
+
+    <div class="speed-control">
+      <span class="speed-icon">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 4a8 8 0 1 1-5.66 13.66l1.42-1.42A6 6 0 1 0 12 6V0l4 4-4 4V4z"/></svg>
+      </span>
+      <input id="speed" type="range" min="1200" max="6000" step="400" value="3000">
+      <span class="speed-label" id="speed-label">3.0 s</span>
+    </div>
+  </footer>
+
+  <!-- Help modal -->
+  <div class="modal" id="help-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="help-close" aria-label="Close">×</button>
+      <h2 data-i18n="help_h2">Come funziona il trucco</h2>
+      <ol id="help-list"></ol>
+      <p class="example" id="help-example"></p>
+      <p class="magic" id="help-magic"></p>
+      <p class="kbd" id="help-kbd"></p>
+    </div>
+  </div>
+
+</div>
+
+<script src="trucco9.js"></script>
+</body>
+</html>

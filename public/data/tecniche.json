@@ -1,0 +1,420 @@
+{
+  "techniques": [
+    {
+      "id": "cover",
+      "slug": "introduzione",
+      "img": "00_cover.png",
+      "svg": "00_cover.svg",
+      "emoji": "📖",
+      "tags": ["intro"],
+      "it": {
+        "title": "Introduzione alle tecniche visive",
+        "summary": "Una mappa di tutte le strade per imparare a moltiplicare.",
+        "body": "<p>La moltiplicazione non è una scala unica: è una rete di strade. Alcune strade passano dalle mani (il trucco del 9), altre dai chicchi di riso (lo schieramento), altre ancora da quadrati colorati (il modello d'area). Conoscere più strade rende il viaggio sicuro: se una è chiusa per via dei lavori, puoi scegliere l'altra.</p><p>Sfoglia le 17 schede e scegli la tua preferita per ogni numero della tavola pitagorica.</p>"
+      },
+      "en": {
+        "title": "Introduction to the visual techniques",
+        "summary": "A map of all the roads for learning to multiply.",
+        "body": "<p>Multiplication is not a single ladder: it's a network of roads. Some go through your hands (the nine trick), some through grains of rice (arrays), and some through coloured squares (the area model). Knowing many roads makes the journey safe: if one is closed for repairs, you can pick another.</p><p>Browse the 17 cards and pick your favourite for every number in the times table.</p>"
+      },
+      "fr": {
+        "title": "Introduction aux techniques visuelles",
+        "summary": "Une carte de tous les chemins pour apprendre à multiplier.",
+        "body": "<p>La multiplication n'est pas une seule échelle : c'est un réseau de routes. Certaines passent par les mains (le truc du 9), d'autres par les grains de riz (le tableau), d'autres encore par des carrés colorés (le modèle d'aire). Connaître plusieurs chemins rend le voyage sûr : si l'un est fermé, tu peux en choisir un autre.</p><p>Feuillette les 17 fiches et choisis ta préférée pour chaque nombre de la table.</p>"
+      }
+    },
+    {
+      "id": "trucco9_intro",
+      "slug": "trucco-del-9-introduzione",
+      "img": "01a_trucco_9_intro.png",
+      "svg": "01a_trucco_9_intro.svg",
+      "emoji": "✋",
+      "tags": ["fingers", "magic"],
+      "interactive_link": "/trucco9/",
+      "it": {
+        "title": "Il trucco del 9 (introduzione)",
+        "summary": "Apri le mani: il segreto della tabellina del 9 sta nelle tue dita.",
+        "body": "<p>Numera le dita da 1 a 10, da sinistra a destra. Per fare <strong>9 × n</strong>, piega il dito numero n. Le dita rimaste a <strong>sinistra</strong> del piegato sono le <strong>decine</strong>, quelle a <strong>destra</strong> sono le <strong>unità</strong>.</p><p>Esempio: <strong>9 × 3</strong> → piego il terzo dito → 2 dita a sinistra (= 20) + 7 dita a destra (= 7) → <strong>27</strong>.</p><p>👉 Apri la versione <a href=\"/trucco9/\">animata e interattiva</a> per provarla con dieci dita disegnate.</p>"
+      },
+      "en": {
+        "title": "The Nine Trick (introduction)",
+        "summary": "Open your hands: the secret of the nine times table is in your fingers.",
+        "body": "<p>Number your fingers 1 to 10, left to right. For <strong>9 × n</strong>, bend finger number n. The fingers <strong>to the left</strong> of the bent one are the <strong>tens</strong>, those <strong>to the right</strong> are the <strong>units</strong>.</p><p>Example: <strong>9 × 3</strong> → bend the third finger → 2 fingers left (= 20) + 7 fingers right (= 7) → <strong>27</strong>.</p><p>👉 Try the <a href=\"/trucco9/\">animated interactive version</a> with ten drawn fingers.</p>"
+      },
+      "fr": {
+        "title": "Le truc du 9 (introduction)",
+        "summary": "Ouvre les mains : le secret de la table de 9 est dans tes doigts.",
+        "body": "<p>Numérote tes doigts de 1 à 10, de gauche à droite. Pour <strong>9 × n</strong>, plie le doigt numéro n. Les doigts <strong>à gauche</strong> du doigt plié sont les <strong>dizaines</strong>, ceux <strong>à droite</strong> sont les <strong>unités</strong>.</p><p>Exemple : <strong>9 × 3</strong> → je plie le 3ème doigt → 2 doigts à gauche (= 20) + 7 doigts à droite (= 7) → <strong>27</strong>.</p><p>👉 Essaie la <a href=\"/trucco9/\">version animée et interactive</a> avec dix doigts dessinés.</p>"
+      }
+    },
+    {
+      "id": "trucco9_gallery",
+      "slug": "trucco-del-9-galleria",
+      "img": "01b_trucco_9_galleria.png",
+      "svg": "01b_trucco_9_galleria.svg",
+      "emoji": "🖼️",
+      "tags": ["fingers", "gallery"],
+      "interactive_link": "/trucco9/",
+      "it": {
+        "title": "Trucco del 9 — Galleria dei 10 passi",
+        "summary": "Tutti i dieci moltiplicatori del 9 in una sola pagina, fianco a fianco.",
+        "body": "<p>Una vista d'insieme dei dieci risultati della tabellina del 9. Riconosci subito il pattern: le decine crescono da 0 a 9, le unità decrescono da 9 a 0. Una scala perfetta.</p><p><strong>Verifica magica</strong>: la somma delle cifre del risultato è sempre 9.</p>"
+      },
+      "en": {
+        "title": "Nine Trick — Gallery of all 10 steps",
+        "summary": "All ten multiples of nine side by side, on one page.",
+        "body": "<p>An overview of the ten results of the 9 times table. Spot the pattern instantly: tens grow from 0 to 9, units shrink from 9 to 0. A perfect ladder.</p><p><strong>Magic check</strong>: the digit sum of every result is always 9.</p>"
+      },
+      "fr": {
+        "title": "Truc du 9 — Galerie des 10 étapes",
+        "summary": "Les dix multiples de 9 côte à côte, sur une seule page.",
+        "body": "<p>Une vue d'ensemble des dix résultats de la table de 9. Tu repères tout de suite le motif : les dizaines vont de 0 à 9, les unités de 9 à 0. Un escalier parfait.</p><p><strong>Vérification magique</strong> : la somme des chiffres du résultat fait toujours 9.</p>"
+      }
+    },
+    {
+      "id": "trucco9_tabella",
+      "slug": "trucco-del-9-tabella",
+      "img": "01c_trucco_9_tabella.png",
+      "svg": "01c_trucco_9_tabella.svg",
+      "emoji": "📊",
+      "tags": ["fingers", "table"],
+      "it": {
+        "title": "Trucco del 9 — Tabella riassuntiva",
+        "summary": "Una tabella che mostra n, dita a sinistra, dita a destra e risultato.",
+        "body": "<p>La tabella mostra in quattro colonne: il moltiplicatore <strong>n</strong>, le <strong>decine</strong> (dita a sinistra del piegato), le <strong>unità</strong> (dita a destra) e il <strong>risultato</strong> finale. Confronta tu: c'è una simmetria nascosta? Sì! Le decine e le unità sono sempre complementari: la loro somma fa 9.</p>"
+      },
+      "en": {
+        "title": "Nine Trick — Summary table",
+        "summary": "A table showing n, fingers left, fingers right, and result.",
+        "body": "<p>The table shows four columns: the multiplier <strong>n</strong>, the <strong>tens</strong> (fingers left of the bent one), the <strong>units</strong> (fingers to the right) and the final <strong>result</strong>. Is there a hidden symmetry? Yes! Tens and units always add up to 9.</p>"
+      },
+      "fr": {
+        "title": "Truc du 9 — Tableau récapitulatif",
+        "summary": "Un tableau avec n, doigts à gauche, doigts à droite et résultat.",
+        "body": "<p>Le tableau montre en quatre colonnes : le multiplicateur <strong>n</strong>, les <strong>dizaines</strong> (doigts à gauche du doigt plié), les <strong>unités</strong> (doigts à droite) et le <strong>résultat</strong>. Une symétrie cachée ? Oui ! Dizaines + unités = 9, toujours.</p>"
+      }
+    },
+    {
+      "id": "schieramento",
+      "slug": "schieramento",
+      "img": "02_schieramento.png",
+      "svg": "02_schieramento.svg",
+      "emoji": "🟨",
+      "tags": ["array", "concrete"],
+      "it": {
+        "title": "Lo schieramento",
+        "summary": "3 × 4 = 12 chicchi disposti in 3 righe da 4. Vedi la moltiplicazione coi tuoi occhi.",
+        "body": "<p>Lo <strong>schieramento</strong> (in inglese <em>array</em>) è il modo più antico di rappresentare una moltiplicazione: oggetti disposti in righe e colonne. Tre righe da quattro pasta = 12 pasta. Cambia i numeri e prova con i tuoi peluche, le tue caramelle, le tue penne. La moltiplicazione diventa fisica.</p><p>Questa è la fase <strong>Concreta</strong> del metodo CPA (Singapore): tocca prima, scrive dopo.</p>"
+      },
+      "en": {
+        "title": "The array",
+        "summary": "3 × 4 = 12 beans arranged in 3 rows of 4. See the multiplication with your own eyes.",
+        "body": "<p>The <strong>array</strong> is the oldest way to show a multiplication: objects in rows and columns. Three rows of four pasta = 12 pasta. Try it with your stuffed toys, your sweets, your pens. Multiplication becomes physical.</p><p>This is the <strong>Concrete</strong> phase of the CPA method (Singapore): touch first, write later.</p>"
+      },
+      "fr": {
+        "title": "Le tableau d'objets",
+        "summary": "3 × 4 = 12 grains rangés en 3 lignes de 4. Vois la multiplication avec tes yeux.",
+        "body": "<p>Le <strong>tableau d'objets</strong> (array) est la plus ancienne façon de représenter une multiplication : des objets en lignes et colonnes. Trois lignes de quatre pâtes = 12 pâtes. Essaie avec tes peluches, tes bonbons, tes stylos. La multiplication devient physique.</p><p>C'est la phase <strong>Concrète</strong> du CPA (Singapour) : toucher d'abord, écrire ensuite.</p>"
+      }
+    },
+    {
+      "id": "distributiva",
+      "slug": "distributiva",
+      "img": "03_distributiva.png",
+      "svg": "03_distributiva.svg",
+      "emoji": "✂️",
+      "tags": ["properties", "decomposition"],
+      "it": {
+        "title": "La proprietà distributiva",
+        "summary": "Spezza un numero difficile in due pezzi facili. 7 × 8 = (7 × 5) + (7 × 3).",
+        "body": "<p>Se non ricordi una tabellina, <strong>spezzala</strong>. 7 × 8 lo trovi così: 7 × 8 = 7 × (5 + 3) = (7 × 5) + (7 × 3) = 35 + 21 = <strong>56</strong>.</p><p>Questa si chiama <strong>proprietà distributiva</strong> della moltiplicazione rispetto alla somma. È il super-potere che rende il calcolo mentale flessibile.</p>"
+      },
+      "en": {
+        "title": "The distributive property",
+        "summary": "Break a hard number into two easy pieces. 7 × 8 = (7 × 5) + (7 × 3).",
+        "body": "<p>If you can't recall a fact, <strong>split it</strong>. 7 × 8 becomes: 7 × 8 = 7 × (5 + 3) = (7 × 5) + (7 × 3) = 35 + 21 = <strong>56</strong>.</p><p>This is the <strong>distributive property</strong> of multiplication over addition. It's the super-power that makes mental maths flexible.</p>"
+      },
+      "fr": {
+        "title": "La propriété distributive",
+        "summary": "Casse un nombre difficile en deux morceaux faciles. 7 × 8 = (7 × 5) + (7 × 3).",
+        "body": "<p>Si tu ne te souviens pas d'un résultat, <strong>découpe-le</strong>. 7 × 8 devient : 7 × 8 = 7 × (5 + 3) = (7 × 5) + (7 × 3) = 35 + 21 = <strong>56</strong>.</p><p>C'est la <strong>propriété distributive</strong> de la multiplication par rapport à l'addition. Le super-pouvoir qui rend le calcul mental flexible.</p>"
+      }
+    },
+    {
+      "id": "doubling_halving",
+      "slug": "raddoppio-dimezzamento",
+      "img": "04_doubling_halving.png",
+      "svg": "04_doubling_halving.svg",
+      "emoji": "⚖️",
+      "tags": ["mental", "strategy"],
+      "it": {
+        "title": "Raddoppio e dimezzamento",
+        "summary": "Raddoppia uno, dimezza l'altro: 16 × 25 = 8 × 50 = 4 × 100 = 400.",
+        "body": "<p>Trasforma una moltiplicazione difficile in una facile <strong>raddoppiando un fattore e dimezzando l'altro</strong>. Il risultato non cambia.</p><p>16 × 25 = 8 × 50 = 4 × 100 = <strong>400</strong>. Magia matematica usata da chi fa la spesa a mente.</p>"
+      },
+      "en": {
+        "title": "Doubling and halving",
+        "summary": "Double one, halve the other: 16 × 25 = 8 × 50 = 4 × 100 = 400.",
+        "body": "<p>Turn a tricky multiplication into an easy one by <strong>doubling one factor and halving the other</strong>. The product stays the same.</p><p>16 × 25 = 8 × 50 = 4 × 100 = <strong>400</strong>. Mental-maths magic used by shoppers everywhere.</p>"
+      },
+      "fr": {
+        "title": "Double et moitié",
+        "summary": "Double un facteur, moitié l'autre : 16 × 25 = 8 × 50 = 4 × 100 = 400.",
+        "body": "<p>Transforme une multiplication difficile en une facile en <strong>doublant un facteur et divisant l'autre par deux</strong>. Le produit ne change pas.</p><p>16 × 25 = 8 × 50 = 4 × 100 = <strong>400</strong>. La magie du calcul mental.</p>"
+      }
+    },
+    {
+      "id": "pitagorica",
+      "slug": "tavola-pitagorica-colorata",
+      "img": "05_pitagorica_colorata.png",
+      "svg": "05_pitagorica_colorata.svg",
+      "emoji": "🌈",
+      "tags": ["table", "patterns"],
+      "it": {
+        "title": "La tavola pitagorica colorata",
+        "summary": "I quadrati perfetti formano una diagonale. La tabella ha simmetrie nascoste.",
+        "body": "<p>La <strong>tavola pitagorica</strong> non è solo una griglia da memorizzare: è una <strong>mappa di motivi</strong>. La diagonale è fatta dai <strong>quadrati perfetti</strong> (1, 4, 9, 16, 25...). I numeri sono simmetrici rispetto alla diagonale: 3 × 7 = 7 × 3. La riga del 5 finisce sempre per 0 o 5. La riga del 9 ha cifre che, sommate, danno 9.</p><p>Colorare la tabella ti aiuta a vedere queste regolarità.</p>"
+      },
+      "en": {
+        "title": "The colourful times-table",
+        "summary": "The perfect squares form a diagonal. The table is full of hidden symmetries.",
+        "body": "<p>The <strong>times-table</strong> is not just a grid to memorise: it's a <strong>map of patterns</strong>. The diagonal contains the <strong>perfect squares</strong> (1, 4, 9, 16, 25…). Numbers are symmetric across the diagonal: 3 × 7 = 7 × 3. The 5 row always ends in 0 or 5. The 9 row has digits that sum to 9.</p><p>Colouring the grid helps you see these regularities.</p>"
+      },
+      "fr": {
+        "title": "La table de Pythagore colorée",
+        "summary": "Les carrés parfaits forment une diagonale. La table cache des symétries.",
+        "body": "<p>La <strong>table de Pythagore</strong> n'est pas qu'une grille à mémoriser : c'est une <strong>carte de motifs</strong>. La diagonale contient les <strong>carrés parfaits</strong> (1, 4, 9, 16, 25…). Les nombres sont symétriques par rapport à la diagonale : 3 × 7 = 7 × 3. La ligne des 5 se termine toujours par 0 ou 5. La ligne des 9 a des chiffres dont la somme fait 9.</p><p>Colorier la table aide à voir ces régularités.</p>"
+      }
+    },
+    {
+      "id": "sakuranbo",
+      "slug": "sakuranbo",
+      "img": "06_sakuranbo.png",
+      "svg": "06_sakuranbo.svg",
+      "emoji": "🍒",
+      "tags": ["japan", "decomposition"],
+      "it": {
+        "title": "Sakuranbo (le ciliegine giapponesi)",
+        "summary": "Spezza il numero in due ciliegie. Tecnica usata nelle scuole giapponesi.",
+        "body": "<p>In Giappone i bambini imparano a scomporre i numeri come <strong>ciliegie</strong> (<em>sakuranbo</em>): un numero grande sta in alto, due piccoli sotto, uniti come due ciliegine sullo stesso picciolo.</p><p>Per fare 8 + 7 mentalmente, scomponi il 7 in 2 + 5: 8 + 2 = 10, poi 10 + 5 = 15. Funziona anche per la moltiplicazione: 6 × 8 = 6 × (5 + 3) = 30 + 18 = 48.</p>"
+      },
+      "en": {
+        "title": "Sakuranbo (the Japanese cherries)",
+        "summary": "Break a number into two cherries. A trick taught in Japanese primary schools.",
+        "body": "<p>In Japan children learn to decompose numbers as <strong>cherries</strong> (<em>sakuranbo</em>): a big number on top, two small ones below, joined like cherries on the same stem.</p><p>For 8 + 7 mentally: split 7 into 2 + 5: 8 + 2 = 10, then 10 + 5 = 15. It works for multiplication too: 6 × 8 = 6 × (5 + 3) = 30 + 18 = 48.</p>"
+      },
+      "fr": {
+        "title": "Sakuranbo (les cerises japonaises)",
+        "summary": "Coupe le nombre en deux cerises. Technique enseignée au Japon.",
+        "body": "<p>Au Japon les enfants apprennent à décomposer les nombres comme des <strong>cerises</strong> (<em>sakuranbo</em>) : un grand nombre en haut, deux petits en bas, reliés comme deux cerises sur la même tige.</p><p>Pour 8 + 7 mentalement : décompose 7 en 2 + 5 → 8 + 2 = 10, puis 10 + 5 = 15. Marche aussi pour la multiplication : 6 × 8 = 6 × (5 + 3) = 30 + 18 = 48.</p>"
+      }
+    },
+    {
+      "id": "bar_model",
+      "slug": "bar-model-singapore",
+      "img": "07_bar_model.png",
+      "svg": "07_bar_model.svg",
+      "emoji": "📏",
+      "tags": ["singapore", "problem-solving"],
+      "it": {
+        "title": "Bar model (Singapore)",
+        "summary": "Disegna i numeri come barre lunghe. Risolvi i problemi a colpo d'occhio.",
+        "body": "<p>Il <strong>bar model</strong>, inventato dalla scuola di Singapore, rappresenta i numeri come <strong>barre</strong>. Tre barre uguali una accanto all'altra fanno 3 × n. Una barra lunga divisa in 4 parti uguali risolve una divisione.</p><p>Esempio: ho 24 caramelle e voglio dividerle tra 3 amiche. Disegno una barra lunga 24 e la divido in 3: ogni pezzo vale 8. Ognuna avrà 8 caramelle.</p>"
+      },
+      "en": {
+        "title": "Bar model (Singapore)",
+        "summary": "Draw numbers as long bars. Solve word problems at a glance.",
+        "body": "<p>The <strong>bar model</strong>, invented in Singapore's schools, represents numbers as <strong>bars</strong>. Three equal bars in a row make 3 × n. A long bar split into 4 equal parts solves a division.</p><p>Example: I have 24 sweets to share between 3 friends. I draw a bar of 24 and split it into 3: each piece is 8. Each friend gets 8 sweets.</p>"
+      },
+      "fr": {
+        "title": "Bar model (Singapour)",
+        "summary": "Dessine les nombres comme des barres. Résous les problèmes d'un coup d'œil.",
+        "body": "<p>Le <strong>bar model</strong>, inventé à Singapour, représente les nombres comme des <strong>barres</strong>. Trois barres égales côte à côte font 3 × n. Une longue barre divisée en 4 parties égales résout une division.</p><p>Exemple : j'ai 24 bonbons à partager entre 3 amies. Je dessine une barre de 24 et je la divise en 3 : chaque part fait 8. Chacune a 8 bonbons.</p>"
+      }
+    },
+    {
+      "id": "nikhilam",
+      "slug": "nikhilam-vedico",
+      "img": "08_nikhilam.png",
+      "svg": "08_nikhilam.svg",
+      "emoji": "🕉️",
+      "tags": ["india", "shortcut"],
+      "it": {
+        "title": "Nikhilam (matematica vedica)",
+        "summary": "Per moltiplicare numeri vicini al 100: una scorciatoia indiana antichissima.",
+        "body": "<p>Per moltiplicare due numeri <strong>vicini al 100</strong>, come 97 × 96, gli antichi matematici indiani usavano la regola <em>Nikhilam Navataścaramaṁ Daśataḥ</em> (\"tutto da 9 e l'ultimo da 10\").</p><ol><li>Quanto manca a 100? 97 → manca 3. 96 → manca 4.</li><li>Sottrai in croce: 97 − 4 = 93 (oppure 96 − 3 = 93). Sono le prime due cifre.</li><li>Moltiplica gli scarti: 3 × 4 = 12. Sono le ultime due cifre.</li><li>Risultato: <strong>9312</strong>.</li></ol><p>Magia? No, algebra: (100−a)(100−b) = 100(100−a−b) + ab.</p>"
+      },
+      "en": {
+        "title": "Nikhilam (Vedic maths)",
+        "summary": "For multiplying numbers near 100: an ancient Indian shortcut.",
+        "body": "<p>To multiply two numbers <strong>close to 100</strong>, like 97 × 96, ancient Indian mathematicians used the <em>Nikhilam Navataścaramaṁ Daśataḥ</em> rule (\"all from 9 and the last from 10\").</p><ol><li>How far from 100? 97 → 3 short. 96 → 4 short.</li><li>Cross-subtract: 97 − 4 = 93 (or 96 − 3 = 93). First two digits.</li><li>Multiply the gaps: 3 × 4 = 12. Last two digits.</li><li>Answer: <strong>9312</strong>.</li></ol><p>Magic? No, algebra: (100−a)(100−b) = 100(100−a−b) + ab.</p>"
+      },
+      "fr": {
+        "title": "Nikhilam (maths védiques)",
+        "summary": "Pour multiplier des nombres proches de 100 : un raccourci indien ancestral.",
+        "body": "<p>Pour multiplier deux nombres <strong>proches de 100</strong>, comme 97 × 96, les anciens mathématiciens indiens utilisaient la règle <em>Nikhilam Navataścaramaṁ Daśataḥ</em> (« tout par 9, le dernier par 10 »).</p><ol><li>Combien manque-t-il à 100 ? 97 → 3. 96 → 4.</li><li>Soustraction croisée : 97 − 4 = 93. Les deux premiers chiffres.</li><li>Multiplie les écarts : 3 × 4 = 12. Les deux derniers.</li><li>Résultat : <strong>9312</strong>.</li></ol><p>Magie ? Non, algèbre : (100−a)(100−b) = 100(100−a−b) + ab.</p>"
+      }
+    },
+    {
+      "id": "egiziana",
+      "slug": "moltiplicazione-egiziana",
+      "img": "09_egiziana.png",
+      "svg": "09_egiziana.svg",
+      "emoji": "🏺",
+      "tags": ["history", "doubling"],
+      "it": {
+        "title": "Moltiplicazione egiziana",
+        "summary": "4000 anni fa gli egizi moltiplicavano solo... raddoppiando!",
+        "body": "<p>Gli antichi <strong>egizi</strong> non avevano le tabelline. Sapevano solo raddoppiare. Per fare 13 × 27:</p><ol><li>Scrivono 1 e 27.</li><li>Raddoppiano: 2 e 54.</li><li>Raddoppiano ancora: 4 e 108. Poi 8 e 216.</li><li>Si fermano: 1 + 4 + 8 = 13 ✓.</li><li>Sommano i corrispondenti: 27 + 108 + 216 = <strong>351</strong>.</li></ol><p>È il primo algoritmo della storia, scritto sul Papiro di Rhind (1650 a.C.). E funziona ancora.</p>"
+      },
+      "en": {
+        "title": "Egyptian multiplication",
+        "summary": "4000 years ago Egyptians multiplied by only… doubling!",
+        "body": "<p>The ancient <strong>Egyptians</strong> had no times-tables. They only knew how to double. For 13 × 27:</p><ol><li>Write 1 and 27.</li><li>Double: 2 and 54.</li><li>Double again: 4 and 108. Then 8 and 216.</li><li>Stop: 1 + 4 + 8 = 13 ✓.</li><li>Add the right column: 27 + 108 + 216 = <strong>351</strong>.</li></ol><p>It's the first algorithm in history, written on the Rhind Papyrus (1650 BC). And it still works.</p>"
+      },
+      "fr": {
+        "title": "Multiplication égyptienne",
+        "summary": "Il y a 4000 ans les Égyptiens multipliaient seulement… en doublant !",
+        "body": "<p>Les <strong>Égyptiens</strong> n'avaient pas de tables de multiplication. Ils savaient juste doubler. Pour 13 × 27 :</p><ol><li>Écris 1 et 27.</li><li>Double : 2 et 54.</li><li>Encore : 4 et 108. Puis 8 et 216.</li><li>Stop : 1 + 4 + 8 = 13 ✓.</li><li>Additionne la colonne de droite : 27 + 108 + 216 = <strong>351</strong>.</li></ol><p>C'est le premier algorithme de l'histoire, écrit sur le Papyrus Rhind (1650 av. J.-C.). Et il marche encore.</p>"
+      }
+    },
+    {
+      "id": "skip_counting",
+      "slug": "skip-counting",
+      "img": "10_skip_counting.png",
+      "svg": "10_skip_counting.svg",
+      "emoji": "🦘",
+      "tags": ["sequence", "rhythm"],
+      "it": {
+        "title": "Skip counting (saltare per contare)",
+        "summary": "Conta a balzi: 3, 6, 9, 12, 15… È già una tabellina.",
+        "body": "<p>Lo <strong>skip counting</strong> (contare a salti) è il modo più naturale di scoprire le tabelline. Conta a voce alta saltando di 3 in 3, di 5 in 5, di 7 in 7. Ogni salto è una moltiplicazione.</p><p>Trova il ritmo: 4, 8, 12, 16, 20… ogni numero che senti è 4 × qualcosa. Quando arrivi a 28 hai appena fatto 4 × 7.</p><p>Provalo battendo le mani o saltando per la cucina.</p>"
+      },
+      "en": {
+        "title": "Skip counting",
+        "summary": "Count by hops: 3, 6, 9, 12, 15… You're already saying a times table.",
+        "body": "<p><strong>Skip counting</strong> is the most natural way to discover times tables. Count out loud hopping by 3, by 5, by 7. Every hop is a multiplication.</p><p>Find the rhythm: 4, 8, 12, 16, 20… every number is 4 × something. When you reach 28 you just did 4 × 7.</p><p>Try it clapping or jumping around the kitchen.</p>"
+      },
+      "fr": {
+        "title": "Compter en sautant",
+        "summary": "Compte en bonds : 3, 6, 9, 12, 15… c'est déjà une table.",
+        "body": "<p>Le <strong>skip counting</strong> est la façon la plus naturelle de découvrir les tables. Compte à voix haute par bonds de 3, de 5, de 7. Chaque saut est une multiplication.</p><p>Trouve le rythme : 4, 8, 12, 16, 20… chaque nombre est 4 × quelque chose. Arrivée à 28, tu viens de faire 4 × 7.</p><p>Essaie en tapant des mains ou en sautant dans la cuisine.</p>"
+      }
+    },
+    {
+      "id": "number_bonds",
+      "slug": "number-bonds",
+      "img": "11_number_bonds.png",
+      "svg": "11_number_bonds.svg",
+      "emoji": "🔗",
+      "tags": ["singapore", "decomposition"],
+      "it": {
+        "title": "Number bonds (legami tra numeri)",
+        "summary": "Ogni numero è la somma di due amici. Scopri chi è amico di chi.",
+        "body": "<p>I <strong>number bonds</strong> sono i \"legami amici\" tra numeri: 10 è amico di 1+9, 2+8, 3+7, 4+6, 5+5. Conoscere a memoria i 10-bonds significa fare a mente qualsiasi somma sotto il 20.</p><p>Per la moltiplicazione: 8 × 7 = (8 × 10) − (8 × 3) = 80 − 24 = 56, perché 7 = 10 − 3, e i bond del 10 li sai a memoria.</p>"
+      },
+      "en": {
+        "title": "Number bonds",
+        "summary": "Every number is the sum of two friends. Discover who's friends with whom.",
+        "body": "<p><strong>Number bonds</strong> are the friendship links between numbers: 10 is friends with 1+9, 2+8, 3+7, 4+6, 5+5. Knowing the 10-bonds by heart lets you add anything under 20 in your head.</p><p>For multiplication: 8 × 7 = (8 × 10) − (8 × 3) = 80 − 24 = 56, because 7 = 10 − 3, and you know the 10-bonds.</p>"
+      },
+      "fr": {
+        "title": "Number bonds",
+        "summary": "Chaque nombre est la somme de deux amis. Découvre qui est ami avec qui.",
+        "body": "<p>Les <strong>number bonds</strong> sont les liens d'amitié entre nombres : 10 est ami avec 1+9, 2+8, 3+7, 4+6, 5+5. Connaître par cœur les bonds de 10 te permet d'additionner sous 20 mentalement.</p><p>Pour la multiplication : 8 × 7 = (8 × 10) − (8 × 3) = 80 − 24 = 56, car 7 = 10 − 3, et tu connais les bonds de 10.</p>"
+      }
+    },
+    {
+      "id": "area_model",
+      "slug": "area-model",
+      "img": "12_area_model.png",
+      "svg": "12_area_model.svg",
+      "emoji": "🟦",
+      "tags": ["geometry", "area"],
+      "it": {
+        "title": "Modello d'area",
+        "summary": "23 × 14 diventa un rettangolo diviso in quattro stanze.",
+        "body": "<p>Il <strong>modello d'area</strong> trasforma la moltiplicazione in geometria. Per 23 × 14: disegna un rettangolo di lati 23 e 14, dividilo in 4 stanze: (20+3) × (10+4).</p><ul><li>Stanza in alto a sinistra: 20 × 10 = 200</li><li>In alto a destra: 20 × 4 = 80</li><li>In basso a sinistra: 3 × 10 = 30</li><li>In basso a destra: 3 × 4 = 12</li></ul><p>Somma: 200 + 80 + 30 + 12 = <strong>322</strong>. Funziona sempre. È la base del calcolo per iscritto delle scuole di tutto il mondo.</p>"
+      },
+      "en": {
+        "title": "Area model",
+        "summary": "23 × 14 becomes a rectangle divided into four rooms.",
+        "body": "<p>The <strong>area model</strong> turns multiplication into geometry. For 23 × 14: draw a rectangle with sides 23 and 14, split it into 4 rooms: (20+3) × (10+4).</p><ul><li>Top-left: 20 × 10 = 200</li><li>Top-right: 20 × 4 = 80</li><li>Bottom-left: 3 × 10 = 30</li><li>Bottom-right: 3 × 4 = 12</li></ul><p>Total: 200 + 80 + 30 + 12 = <strong>322</strong>. Always works. It's the base of written multiplication in schools worldwide.</p>"
+      },
+      "fr": {
+        "title": "Modèle d'aire",
+        "summary": "23 × 14 devient un rectangle découpé en quatre pièces.",
+        "body": "<p>Le <strong>modèle d'aire</strong> transforme la multiplication en géométrie. Pour 23 × 14 : dessine un rectangle de côtés 23 et 14, découpe-le en 4 pièces : (20+3) × (10+4).</p><ul><li>En haut à gauche : 20 × 10 = 200</li><li>En haut à droite : 20 × 4 = 80</li><li>En bas à gauche : 3 × 10 = 30</li><li>En bas à droite : 3 × 4 = 12</li></ul><p>Total : 200 + 80 + 30 + 12 = <strong>322</strong>. Toujours juste. C'est la base de la multiplication posée dans le monde entier.</p>"
+      }
+    },
+    {
+      "id": "rekenrek",
+      "slug": "rekenrek",
+      "img": "13_rekenrek.png",
+      "svg": "13_rekenrek.svg",
+      "emoji": "🧮",
+      "tags": ["netherlands", "concrete"],
+      "it": {
+        "title": "Rekenrek (l'abaco olandese)",
+        "summary": "Due file di 10 palline a colori alternati. Vedi 5+3 senza contare.",
+        "body": "<p>Il <strong>rekenrek</strong>, inventato in Olanda, è un abaco con due file da 10 palline, colorate 5 rosse + 5 bianche per fila. Permette di \"vedere\" i numeri senza contare uno per uno: 7 = 5 + 2, lo riconosci a colpo d'occhio.</p><p>Per la moltiplicazione, sposta gruppi uguali: 3 file da 4 palline = 12 senza contare. È il <strong>concreto</strong> della CPA in versione tascabile.</p>"
+      },
+      "en": {
+        "title": "Rekenrek (the Dutch abacus)",
+        "summary": "Two rows of 10 beads in alternating colours. See 5+3 without counting.",
+        "body": "<p>The <strong>rekenrek</strong>, invented in the Netherlands, is an abacus with two rows of 10 beads, coloured 5 red + 5 white per row. You can \"see\" numbers without counting one by one: 7 = 5 + 2, instantly recognisable.</p><p>For multiplication, shift equal groups: 3 rows of 4 beads = 12 at a glance. It's the <strong>Concrete</strong> phase of CPA in pocket form.</p>"
+      },
+      "fr": {
+        "title": "Rekenrek (boulier néerlandais)",
+        "summary": "Deux rangées de 10 boules de couleurs alternées. Tu vois 5+3 sans compter.",
+        "body": "<p>Le <strong>rekenrek</strong>, inventé aux Pays-Bas, est un boulier avec deux rangées de 10 boules, colorées 5 rouges + 5 blanches par rangée. Tu peux « voir » les nombres sans compter : 7 = 5 + 2, reconnaissable d'un coup d'œil.</p><p>Pour la multiplication, déplace des groupes égaux : 3 rangées de 4 boules = 12 sans compter. Le <strong>concret</strong> du CPA en format poche.</p>"
+      }
+    },
+    {
+      "id": "yupana",
+      "slug": "yupana-inca",
+      "img": "14_yupana.png",
+      "svg": "14_yupana.svg",
+      "emoji": "🏔️",
+      "tags": ["history", "andes"],
+      "it": {
+        "title": "Yupana (l'abaco Inca)",
+        "summary": "Una tavola con caselle dove gli Inca facevano i calcoli con chicchi di mais.",
+        "body": "<p>La <strong>yupana</strong> era l'abaco delle Ande, usata dagli Inca prima dell'arrivo degli europei. Ogni casella valeva 1, 2, 3 o 5 chicchi, e ogni colonna era una potenza di 10 (unità, decine, centinaia, migliaia).</p><p>Per moltiplicare 6 × 4, gli Inca mettevano 6 chicchi sulla colonna giusta, quattro volte. È un'altra dimostrazione che la matematica è universale: ogni civiltà ha trovato il suo modo per fare gli stessi calcoli.</p>"
+      },
+      "en": {
+        "title": "Yupana (the Inca abacus)",
+        "summary": "A board with cells where the Incas calculated with maize grains.",
+        "body": "<p>The <strong>yupana</strong> was the Andean abacus, used by the Incas long before Europeans arrived. Each cell was worth 1, 2, 3 or 5 grains, and each column was a power of 10 (units, tens, hundreds, thousands).</p><p>To multiply 6 × 4 the Incas placed 6 grains in the right column, four times. Another proof that maths is universal: every civilisation found its own way to do the same calculations.</p>"
+      },
+      "fr": {
+        "title": "Yupana (le boulier inca)",
+        "summary": "Un plateau à cases où les Incas calculaient avec des grains de maïs.",
+        "body": "<p>La <strong>yupana</strong> était le boulier des Andes, utilisé par les Incas avant l'arrivée des Européens. Chaque case valait 1, 2, 3 ou 5 grains, et chaque colonne était une puissance de 10 (unités, dizaines, centaines, milliers).</p><p>Pour multiplier 6 × 4 les Incas plaçaient 6 grains dans la bonne colonne, quatre fois. Une preuve de plus que les maths sont universelles : chaque civilisation a trouvé sa manière de faire les mêmes calculs.</p>"
+      }
+    },
+    {
+      "id": "mappa",
+      "slug": "mappa-tecniche",
+      "img": "15_mappa.png",
+      "svg": "15_mappa.svg",
+      "emoji": "🗺️",
+      "tags": ["map", "overview"],
+      "it": {
+        "title": "La mappa delle tecniche",
+        "summary": "Tutte le 17 strade della moltiplicazione viste insieme, su un'unica mappa.",
+        "body": "<p>Una mappa che mostra le 17 tecniche divise per famiglia: <strong>concreto</strong> (schieramento, rekenrek, yupana), <strong>visivo</strong> (modello d'area, bar model, tavola pitagorica), <strong>mentale</strong> (distributiva, raddoppio/dimezzamento, number bonds, sakuranbo), <strong>storico</strong> (egiziana, Nikhilam), <strong>kid-friendly</strong> (trucco del 9, skip counting).</p><p>Non c'è UNA tecnica giusta: ce ne sono diciassette. Tu scegli quale usare in ogni occasione.</p>"
+      },
+      "en": {
+        "title": "The map of techniques",
+        "summary": "All 17 roads of multiplication seen together, on a single map.",
+        "body": "<p>A map showing the 17 techniques grouped by family: <strong>concrete</strong> (array, rekenrek, yupana), <strong>visual</strong> (area model, bar model, times-table), <strong>mental</strong> (distributive, doubling/halving, number bonds, sakuranbo), <strong>historical</strong> (Egyptian, Nikhilam), <strong>kid-friendly</strong> (nine trick, skip counting).</p><p>There isn't ONE right technique: there are seventeen. You choose which to use each time.</p>"
+      },
+      "fr": {
+        "title": "La carte des techniques",
+        "summary": "Les 17 chemins de la multiplication vus ensemble, sur une seule carte.",
+        "body": "<p>Une carte qui montre les 17 techniques regroupées par famille : <strong>concret</strong> (tableau, rekenrek, yupana), <strong>visuel</strong> (modèle d'aire, bar model, table de Pythagore), <strong>mental</strong> (distributive, double/moitié, number bonds, sakuranbo), <strong>historique</strong> (égyptienne, Nikhilam), <strong>kid-friendly</strong> (truc du 9, skip counting).</p><p>Il n'y a pas UNE bonne technique : il y en a dix-sept. C'est toi qui choisis laquelle utiliser à chaque fois.</p>"
+      }
+    }
+  ]
+}

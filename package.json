@@ -1,0 +1,14 @@
+{
+  "name": "tartaruga-pina-sito",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/parse-manuale.mjs && node scripts/parse-manuale-math.mjs && node scripts/translate.mjs && node scripts/translate-math.mjs && node scripts/post-build.mjs",
+    "start": "npx --yes serve public -p 4173"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "description": "Sito educativo trilingue (IT/EN/FR) per bambini 7-9 anni: Python con Tartaruga Pina + tecniche visive di moltiplicazione + trucco del 9 interattivo."
+}

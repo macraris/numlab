@@ -1,0 +1,142 @@
+{
+  "lang": "it",
+  "site_title": "L'Isola di Pina",
+  "site_tagline": "Un'isola di carta dove imparare il codice, la matematica e a pensare come una scienziata.",
+  "nav": {
+    "home": "Casa",
+    "math": "Numeri Amici",
+    "python": "Programma con Pina",
+    "gallery": "Galleria",
+    "exercises": "Esercizi",
+    "progress": "I miei progressi",
+    "language": "Lingua"
+  },
+  "home": {
+    "hero_title": "Ciao! Sono Pina la Tartaruga.",
+    "hero_subtitle": "Vieni a esplorare la mia isola: due grandi sentieri ti aspettano.",
+    "hero_cta_math": "Numeri Amici",
+    "hero_cta_python": "Programma con Pina",
+    "paths_title": "Scegli un sentiero",
+    "path_math_title": "Numeri Amici",
+    "path_math_desc": "17 tecniche visive per fare le moltiplicazioni in modi diversi — dal trucco delle dita alla tavola pitagorica colorata.",
+    "path_python_title": "Programma con Pina",
+    "path_python_desc": "42 capitoli illustrati per imparare Python con la Tartaruga: forme, colori, mini-giochi, debugging.",
+    "path_gallery_title": "Galleria",
+    "path_gallery_desc": "Tutti i disegni che Pina ha fatto seguendo i tuoi comandi. Toccali per scoprire come sono nati.",
+    "path_exercises_title": "Esercizi e Sfide",
+    "path_exercises_desc": "50 sfide, 30 bug da scovare, schede stampabili e tante storie curiose.",
+    "stats_title": "Cosa troverai",
+    "stat_chapters": "capitoli",
+    "stat_techniques": "tecniche",
+    "stat_challenges": "sfide",
+    "stat_examples": "esempi di codice",
+    "kid_safe": "Sito kid-safe: nessuna registrazione, nessuna pubblicità, nessun tracciamento. I tuoi progressi restano sul tuo dispositivo."
+  },
+  "math": {
+    "title": "Numeri Amici",
+    "subtitle": "Tante strade per fare la stessa moltiplicazione. Scegli la tua preferita.",
+    "trucco9_card_title": "Il trucco del 9 (interattivo)",
+    "trucco9_card_desc": "Apri le mani e prova: il segreto delle tabelline del 9 in dieci passi animati.",
+    "trucco9_card_cta": "Provalo",
+    "manuale_card_title": "Manuale completo delle moltiplicazioni",
+    "manuale_card_desc": "Otto parti, trentacinque capitoli, tutte le tabelline, problemi reali e pensiero critico. Il percorso completo illustrato.",
+    "manuale_card_cta": "Leggi il manuale",
+    "appendice_card_cta": "Apri appendice esercizi",
+    "techniques_title": "Le 17 tecniche visive",
+    "open_technique": "Apri",
+    "back_to_math": "Torna alle tecniche"
+  },
+  "math_manuale": {
+    "title": "Manuale delle moltiplicazioni",
+    "subtitle": "Otto parti, trentacinque capitoli illustrati per allenare un pensiero moltiplicativo solido.",
+    "breadcrumb": "Manuale"
+  },
+  "math_appendice": {
+    "title": "Appendice — Banca esercizi",
+    "subtitle": "Schede, problemi graduati, problemi olimpiadici, tracciamento progressi.",
+    "breadcrumb": "Appendice esercizi"
+  },
+  "python": {
+    "title": "Programma con Pina",
+    "subtitle": "Dieci parti, quarantadue capitoli. Vai con calma, le tartarughe non corrono.",
+    "preamble_title": "Prima di iniziare",
+    "part_label": "Parte",
+    "chapter_label": "Capitolo",
+    "see_chapter": "Apri",
+    "previous": "← Precedente",
+    "next": "Successivo →",
+    "back_to_index": "Torna all'indice",
+    "code_label": "Codice di esempio",
+    "image_label": "Cosa disegna Pina",
+    "view_full_index": "Vedi tutti i capitoli",
+    "translation_note": "Il testo lungo dei capitoli è disponibile in lingua originale italiana. Titolo e riassunto sono tradotti.",
+    "show_original": "Mostra testo originale",
+    "mark_done": "Capitolo letto ✓",
+    "marked_done": "Letto!",
+    "estimated_time": "Tempo stimato: 15-20 minuti"
+  },
+  "gallery": {
+    "title": "Galleria di Pina",
+    "subtitle": "Tutti i disegni che puoi creare con il manuale. Clicca su uno per vederlo in grande.",
+    "from_chapter": "dal capitolo"
+  },
+  "exercises": {
+    "title": "Esercizi, sfide e schede",
+    "subtitle": "Cinquanta sfide a difficoltà crescente, trenta bug da scovare e materiale stampabile.",
+    "open_section": "Apri",
+    "back_to_index": "Torna all'indice"
+  },
+  "progress": {
+    "title": "I miei progressi",
+    "subtitle": "Tutto quello che hai fatto su questa isola. Solo tu lo puoi vedere — è salvato sul tuo dispositivo.",
+    "chapters_read": "Capitoli letti",
+    "techniques_visited": "Tecniche esplorate",
+    "exercises_visited": "Sezioni esercizi aperte",
+    "badges": "Stelline guadagnate",
+    "badge_first_chapter": "Prima Lettura",
+    "badge_first_chapter_desc": "Hai letto il primo capitolo del manuale.",
+    "badge_five_chapters": "Esploratrice",
+    "badge_five_chapters_desc": "Hai letto cinque capitoli.",
+    "badge_part_complete": "Parte Completa",
+    "badge_part_complete_desc": "Hai finito tutti i capitoli di una Parte.",
+    "badge_all_techniques": "Mago dei Numeri",
+    "badge_all_techniques_desc": "Hai esplorato tutte le 17 tecniche di moltiplicazione.",
+    "badge_trucco9": "Trucco del 9",
+    "badge_trucco9_desc": "Hai imparato il trucco delle dita.",
+    "badge_python_complete": "Pina Maestra",
+    "badge_python_complete_desc": "Hai completato tutti i 42 capitoli del manuale.",
+    "reset_progress": "Azzera i miei progressi",
+    "reset_confirm": "Sei sicura di voler cancellare tutti i progressi? Non si può tornare indietro.",
+    "empty_state": "Apri un capitolo o una tecnica per cominciare l'avventura!"
+  },
+  "sync": {
+    "title": "Sincronizza i progressi",
+    "intro": "Ricevi un codice segreto e ritrovi i tuoi progressi su qualsiasi dispositivo: web, telefono, tablet.",
+    "your_code": "Il tuo codice",
+    "copy": "Copia",
+    "help_share": "Annota il codice o copialo. Ti servirà per riconoscerti sugli altri dispositivi.",
+    "disconnect": "Scollega questo dispositivo",
+    "enable_btn": "✨ Attiva la sincronizzazione",
+    "enable_help": "Verrà generato un codice anonimo, niente email, niente password.",
+    "or": "oppure",
+    "enter_code": "Ho già un codice",
+    "apply": "Usa questo codice",
+    "enter_help": "Digita il codice che hai sull'altro dispositivo per recuperare i progressi.",
+    "error_invalid": "Codice non valido. Formato: PINA-1234"
+  },
+  "footer": {
+    "made_with": "Fatto con cura per chi sta crescendo.",
+    "open_source_note": "Tutti i contenuti sono basati su 50 anni di ricerca didattica internazionale.",
+    "credits": "Crediti",
+    "credits_text": "Constructionism (Papert, MIT), CPA (Singapore), PRIMM (NCCE UK), Hello Ruby (Linda Liukas), Mathigon, Khan Academy Kids, Hello Code (CS Unplugged, NZ)."
+  },
+  "common": {
+    "loading": "Sto caricando...",
+    "error": "Qualcosa è andato storto. Prova a ricaricare la pagina.",
+    "open": "Apri",
+    "close": "Chiudi",
+    "play": "Gioca",
+    "watch": "Guarda",
+    "read": "Leggi"
+  }
+}

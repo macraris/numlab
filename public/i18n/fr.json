@@ -1,0 +1,142 @@
+{
+  "lang": "fr",
+  "site_title": "L'Île de Pina",
+  "site_tagline": "Une île de papier pour apprendre à coder, faire des maths et penser comme une scientifique.",
+  "nav": {
+    "home": "Accueil",
+    "math": "Amis des nombres",
+    "python": "Code avec Pina",
+    "gallery": "Galerie",
+    "exercises": "Exercices",
+    "progress": "Mes progrès",
+    "language": "Langue"
+  },
+  "home": {
+    "hero_title": "Coucou ! Je suis Pina la Tortue.",
+    "hero_subtitle": "Viens explorer mon île : deux grands sentiers t'attendent.",
+    "hero_cta_math": "Amis des nombres",
+    "hero_cta_python": "Code avec Pina",
+    "paths_title": "Choisis un sentier",
+    "path_math_title": "Amis des nombres",
+    "path_math_desc": "17 techniques visuelles pour multiplier — du truc des doigts à la table de Pythagore colorée.",
+    "path_python_title": "Code avec Pina",
+    "path_python_desc": "42 chapitres illustrés pour apprendre Python avec la Tortue : formes, couleurs, mini-jeux, débogage.",
+    "path_gallery_title": "Galerie",
+    "path_gallery_desc": "Tous les dessins que Pina a faits en suivant tes ordres. Touche-les pour voir comment ils sont nés.",
+    "path_exercises_title": "Exercices et défis",
+    "path_exercises_desc": "50 défis, 30 bugs à débusquer, fiches à imprimer et plein d'histoires curieuses.",
+    "stats_title": "Ce que tu vas trouver",
+    "stat_chapters": "chapitres",
+    "stat_techniques": "techniques",
+    "stat_challenges": "défis",
+    "stat_examples": "exemples de code",
+    "kid_safe": "Site sûr pour les enfants : pas d'inscription, pas de publicité, pas de pistage. Tes progrès restent sur ton appareil."
+  },
+  "math": {
+    "title": "Amis des nombres",
+    "subtitle": "Plein de chemins pour faire la même multiplication. Choisis le tien.",
+    "trucco9_card_title": "Le truc du 9 (interactif)",
+    "trucco9_card_desc": "Ouvre les mains et essaie : le secret de la table de 9 en dix étapes animées.",
+    "trucco9_card_cta": "Essaie-le",
+    "manuale_card_title": "Manuel complet des multiplications",
+    "manuale_card_desc": "Huit parties, trente-cinq chapitres, toutes les tables, des problèmes du quotidien et la pensée critique. Le parcours illustré complet.",
+    "manuale_card_cta": "Lis le manuel",
+    "appendice_card_cta": "Ouvrir l'appendice d'exercices",
+    "techniques_title": "Les 17 techniques visuelles",
+    "open_technique": "Ouvrir",
+    "back_to_math": "Retour aux techniques"
+  },
+  "math_manuale": {
+    "title": "Manuel des multiplications",
+    "subtitle": "Huit parties, trente-cinq chapitres illustrés pour bâtir une pensée multiplicative solide.",
+    "breadcrumb": "Manuel"
+  },
+  "math_appendice": {
+    "title": "Appendice — Banque d'exercices",
+    "subtitle": "Fiches, problèmes gradués, problèmes olympiques, suivi des progrès.",
+    "breadcrumb": "Appendice d'exercices"
+  },
+  "python": {
+    "title": "Code avec Pina",
+    "subtitle": "Dix parties, quarante-deux chapitres. Prends ton temps — les tortues ne courent pas.",
+    "preamble_title": "Avant de commencer",
+    "part_label": "Partie",
+    "chapter_label": "Chapitre",
+    "see_chapter": "Ouvrir",
+    "previous": "← Précédent",
+    "next": "Suivant →",
+    "back_to_index": "Retour au sommaire",
+    "code_label": "Exemple de code",
+    "image_label": "Ce que dessine Pina",
+    "view_full_index": "Voir tous les chapitres",
+    "translation_note": "Le texte long des chapitres est en italien (langue originale). Titres et résumés sont traduits.",
+    "show_original": "Afficher le texte original",
+    "mark_done": "Marquer comme lu ✓",
+    "marked_done": "Lu !",
+    "estimated_time": "Durée estimée : 15-20 minutes"
+  },
+  "gallery": {
+    "title": "Galerie de Pina",
+    "subtitle": "Tous les dessins que tu peux créer avec le manuel. Clique sur l'un d'eux pour le voir en grand.",
+    "from_chapter": "du chapitre"
+  },
+  "exercises": {
+    "title": "Exercices, défis et fiches",
+    "subtitle": "Cinquante défis par difficulté croissante, trente bugs à trouver et du matériel imprimable.",
+    "open_section": "Ouvrir",
+    "back_to_index": "Retour au sommaire"
+  },
+  "progress": {
+    "title": "Mes progrès",
+    "subtitle": "Tout ce que tu as fait sur cette île. Toi seule peux le voir — c'est enregistré sur ton appareil.",
+    "chapters_read": "Chapitres lus",
+    "techniques_visited": "Techniques explorées",
+    "exercises_visited": "Sections d'exercices ouvertes",
+    "badges": "Étoiles gagnées",
+    "badge_first_chapter": "Première lecture",
+    "badge_first_chapter_desc": "Tu as lu le premier chapitre du manuel.",
+    "badge_five_chapters": "Exploratrice",
+    "badge_five_chapters_desc": "Tu as lu cinq chapitres.",
+    "badge_part_complete": "Partie terminée",
+    "badge_part_complete_desc": "Tu as terminé tous les chapitres d'une Partie.",
+    "badge_all_techniques": "Magicienne des nombres",
+    "badge_all_techniques_desc": "Tu as exploré les 17 techniques de multiplication.",
+    "badge_trucco9": "Truc du 9",
+    "badge_trucco9_desc": "Tu as appris le truc des doigts.",
+    "badge_python_complete": "Maîtresse Pina",
+    "badge_python_complete_desc": "Tu as terminé les 42 chapitres du manuel.",
+    "reset_progress": "Réinitialiser mes progrès",
+    "reset_confirm": "Es-tu sûre de vouloir effacer tous les progrès ? C'est définitif.",
+    "empty_state": "Ouvre un chapitre ou une technique pour commencer l'aventure !"
+  },
+  "sync": {
+    "title": "Synchroniser tes progrès",
+    "intro": "Reçois un code secret et retrouve tes progrès sur n'importe quel appareil : web, téléphone, tablette.",
+    "your_code": "Ton code",
+    "copy": "Copier",
+    "help_share": "Note le code ou copie-le. Il te servira pour te reconnaître sur les autres appareils.",
+    "disconnect": "Déconnecter cet appareil",
+    "enable_btn": "✨ Activer la synchronisation",
+    "enable_help": "Un code anonyme sera généré — sans e-mail, sans mot de passe.",
+    "or": "ou",
+    "enter_code": "J'ai déjà un code",
+    "apply": "Utiliser ce code",
+    "enter_help": "Tape le code que tu as sur l'autre appareil pour récupérer tes progrès.",
+    "error_invalid": "Code invalide. Format : PINA-1234"
+  },
+  "footer": {
+    "made_with": "Fait avec soin pour celles et ceux qui grandissent.",
+    "open_source_note": "Tous les contenus s'appuient sur 50 ans de recherche internationale en éducation.",
+    "credits": "Crédits",
+    "credits_text": "Constructionism (Papert, MIT), CPA (Singapour), PRIMM (NCCE UK), Hello Ruby (Linda Liukas), Mathigon, Khan Academy Kids, Hello Code (CS Unplugged, NZ)."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Quelque chose s'est mal passé. Recharge la page.",
+    "open": "Ouvrir",
+    "close": "Fermer",
+    "play": "Jouer",
+    "watch": "Regarder",
+    "read": "Lire"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "lang": "en",
+  "site_title": "Pina's Island",
+  "site_tagline": "A paper island for learning to code, do maths, and think like a scientist.",
+  "nav": {
+    "home": "Home",
+    "math": "Number Friends",
+    "python": "Code with Pina",
+    "gallery": "Gallery",
+    "exercises": "Exercises",
+    "progress": "My progress",
+    "language": "Language"
+  },
+  "home": {
+    "hero_title": "Hi! I'm Pina the Turtle.",
+    "hero_subtitle": "Come and explore my island: two big trails are waiting for you.",
+    "hero_cta_math": "Number Friends",
+    "hero_cta_python": "Code with Pina",
+    "paths_title": "Choose a trail",
+    "path_math_title": "Number Friends",
+    "path_math_desc": "17 visual techniques for multiplying numbers — from the finger trick to the colourful times-table.",
+    "path_python_title": "Code with Pina",
+    "path_python_desc": "42 illustrated chapters to learn Python with the Turtle: shapes, colours, mini-games, debugging.",
+    "path_gallery_title": "Gallery",
+    "path_gallery_desc": "All the drawings Pina made following your commands. Tap on one to see how it was born.",
+    "path_exercises_title": "Exercises & Challenges",
+    "path_exercises_desc": "50 challenges, 30 bugs to hunt, printable cards, and curious stories.",
+    "stats_title": "What you'll find",
+    "stat_chapters": "chapters",
+    "stat_techniques": "techniques",
+    "stat_challenges": "challenges",
+    "stat_examples": "code examples",
+    "kid_safe": "Kid-safe site: no sign-up, no ads, no tracking. Your progress stays on your device."
+  },
+  "math": {
+    "title": "Number Friends",
+    "subtitle": "Many roads to the same multiplication. Pick your favourite.",
+    "trucco9_card_title": "The Nine Trick (interactive)",
+    "trucco9_card_desc": "Open your hands and try: the secret of the 9 times table in ten animated steps.",
+    "trucco9_card_cta": "Try it",
+    "manuale_card_title": "Complete multiplication manual",
+    "manuale_card_desc": "Eight parts, thirty-five chapters, all the times tables, real-life problems and critical thinking. The full illustrated course.",
+    "manuale_card_cta": "Read the manual",
+    "appendice_card_cta": "Open exercises appendix",
+    "techniques_title": "The 17 visual techniques",
+    "open_technique": "Open",
+    "back_to_math": "Back to techniques"
+  },
+  "math_manuale": {
+    "title": "Multiplication manual",
+    "subtitle": "Eight parts, thirty-five illustrated chapters to build solid multiplicative thinking.",
+    "breadcrumb": "Manual"
+  },
+  "math_appendice": {
+    "title": "Appendix — Exercise bank",
+    "subtitle": "Worksheets, graded problems, olympic problems, progress tracking.",
+    "breadcrumb": "Exercises appendix"
+  },
+  "python": {
+    "title": "Code with Pina",
+    "subtitle": "Ten parts, forty-two chapters. Take your time — turtles don't run.",
+    "preamble_title": "Before we start",
+    "part_label": "Part",
+    "chapter_label": "Chapter",
+    "see_chapter": "Open",
+    "previous": "← Previous",
+    "next": "Next →",
+    "back_to_index": "Back to index",
+    "code_label": "Code example",
+    "image_label": "What Pina draws",
+    "view_full_index": "See all chapters",
+    "translation_note": "The long chapter prose is shown in its original Italian. Titles and summaries are translated.",
+    "show_original": "Show original text",
+    "mark_done": "Mark as read ✓",
+    "marked_done": "Read!",
+    "estimated_time": "Estimated time: 15-20 minutes"
+  },
+  "gallery": {
+    "title": "Pina's Gallery",
+    "subtitle": "All the drawings you can create with the manual. Click on one to view it full-size.",
+    "from_chapter": "from chapter"
+  },
+  "exercises": {
+    "title": "Exercises, challenges & cards",
+    "subtitle": "Fifty challenges by ascending difficulty, thirty bugs to find, and printable material.",
+    "open_section": "Open",
+    "back_to_index": "Back to index"
+  },
+  "progress": {
+    "title": "My progress",
+    "subtitle": "Everything you've done on this island. Only you can see it — it's saved on your device.",
+    "chapters_read": "Chapters read",
+    "techniques_visited": "Techniques explored",
+    "exercises_visited": "Exercise sections opened",
+    "badges": "Stars earned",
+    "badge_first_chapter": "First Read",
+    "badge_first_chapter_desc": "You read the first chapter of the manual.",
+    "badge_five_chapters": "Explorer",
+    "badge_five_chapters_desc": "You read five chapters.",
+    "badge_part_complete": "Part Completed",
+    "badge_part_complete_desc": "You finished all the chapters in a Part.",
+    "badge_all_techniques": "Number Wizard",
+    "badge_all_techniques_desc": "You explored all 17 multiplication techniques.",
+    "badge_trucco9": "Nine Trick",
+    "badge_trucco9_desc": "You learned the finger trick.",
+    "badge_python_complete": "Master Pina",
+    "badge_python_complete_desc": "You completed all 42 chapters of the manual.",
+    "reset_progress": "Reset my progress",
+    "reset_confirm": "Are you sure you want to clear all progress? This cannot be undone.",
+    "empty_state": "Open a chapter or a technique to start the adventure!"
+  },
+  "sync": {
+    "title": "Sync your progress",
+    "intro": "Get a secret code and find your progress on any device: web, phone, tablet.",
+    "your_code": "Your code",
+    "copy": "Copy",
+    "help_share": "Write down the code or copy it. You'll need it to recognise yourself on other devices.",
+    "disconnect": "Unlink this device",
+    "enable_btn": "✨ Enable sync",
+    "enable_help": "An anonymous code will be generated — no email, no password.",
+    "or": "or",
+    "enter_code": "I already have a code",
+    "apply": "Use this code",
+    "enter_help": "Type the code you have on the other device to retrieve your progress.",
+    "error_invalid": "Invalid code. Format: PINA-1234"
+  },
+  "footer": {
+    "made_with": "Made with care for those who are growing up.",
+    "open_source_note": "All content is grounded in 50 years of international research on learning.",
+    "credits": "Credits",
+    "credits_text": "Constructionism (Papert, MIT), CPA (Singapore), PRIMM (NCCE UK), Hello Ruby (Linda Liukas), Mathigon, Khan Academy Kids, Hello Code (CS Unplugged, NZ)."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong. Try reloading the page.",
+    "open": "Open",
+    "close": "Close",
+    "play": "Play",
+    "watch": "Watch",
+    "read": "Read"
+  }
+}
