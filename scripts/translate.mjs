@@ -9,8 +9,9 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-const MANUALE = JSON.parse(fs.readFileSync(path.join(ROOT, 'public', 'data', 'manuale.json'), 'utf-8'));
-const APPENDICE = JSON.parse(fs.readFileSync(path.join(ROOT, 'public', 'data', 'appendice.json'), 'utf-8'));
+// Intermediate JSONs live in scripts/data/ (committed) — kept out of public/ so they aren't deployed.
+const MANUALE = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'manuale.json'), 'utf-8'));
+const APPENDICE = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'appendice.json'), 'utf-8'));
 
 // Optional body translations live in scripts/translations/. Missing file = no overrides.
 function loadBody(lang) {

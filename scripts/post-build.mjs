@@ -54,24 +54,6 @@ if (missing > 0) {
   process.exit(1);
 }
 
-// Clean up build intermediates: the un-suffixed *.json sources are only inputs
-// to translate.mjs/translate-math.mjs; the runtime app only fetches .it/.en/.fr.
-const intermediates = [
-  'data/manuale.json',
-  'data/manuale_math.json',
-  'data/appendice.json',
-  'data/appendice_math.json',
-];
-let bytesFreed = 0;
-for (const f of intermediates) {
-  const p = path.join(PUB, f);
-  if (fs.existsSync(p)) {
-    bytesFreed += fs.statSync(p).size;
-    fs.unlinkSync(p);
-  }
-}
-if (bytesFreed > 0) {
-  console.log(`✓ Trimmed ${(bytesFreed / 1024).toFixed(0)} KB of build intermediates from public/`);
-}
-
+// Intermediate JSONs (manuale.json, etc.) now live in scripts/data/, outside public/.
+// No cleanup needed.
 console.log('Build OK ✓');

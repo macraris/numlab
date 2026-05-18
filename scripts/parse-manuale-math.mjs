@@ -9,8 +9,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const SRC_MANUALE = 'C:/Users/admin/Desktop/namExo/bestWayMoltiplication/MANUALE.md';
 const SRC_APPENDICE = 'C:/Users/admin/Desktop/namExo/bestWayMoltiplication/APPENDICE_ESERCIZI.md';
-const OUT_MANUALE = path.join(ROOT, 'public', 'data', 'manuale_math.json');
-const OUT_APPENDICE = path.join(ROOT, 'public', 'data', 'appendice_math.json');
+const OUT_MANUALE = path.join(__dirname, 'data', 'manuale_math.json');
+const OUT_APPENDICE = path.join(__dirname, 'data', 'appendice_math.json');
 
 function slugify(s) {
   return s
@@ -154,6 +154,11 @@ function parseAppendice(md) {
   }
   push();
   return { preamble, sections };
+}
+
+if (!fs.existsSync(SRC_MANUALE) || !fs.existsSync(SRC_APPENDICE)) {
+  console.log(`[parse-manuale-math] SRC markdown not found locally — skipping. Using committed scripts/data/*.json instead.`);
+  process.exit(0);
 }
 
 const manualeSrc = fs.readFileSync(SRC_MANUALE, 'utf-8');
