@@ -10,6 +10,24 @@ const ROOT = path.resolve(__dirname, '..');
 const MANUALE = JSON.parse(fs.readFileSync(path.join(ROOT, 'public', 'data', 'manuale_math.json'), 'utf-8'));
 const APPENDICE = JSON.parse(fs.readFileSync(path.join(ROOT, 'public', 'data', 'appendice_math.json'), 'utf-8'));
 
+// Optional body translations live in scripts/translations/. Missing file = no overrides.
+function loadBody(lang) {
+  const p = path.join(__dirname, 'translations', `manuale_math_body.${lang}.json`);
+  if (!fs.existsSync(p)) return { preamble: null, parts: {}, chapters: {} };
+  const j = JSON.parse(fs.readFileSync(p, 'utf-8'));
+  return { preamble: j.preamble || null, parts: j.parts || {}, chapters: j.chapters || {} };
+}
+const BODY = { en: loadBody('en'), fr: loadBody('fr') };
+
+// Optional appendix body translations.
+function loadAppBody(lang) {
+  const p = path.join(__dirname, 'translations', `appendice_math_body.${lang}.json`);
+  if (!fs.existsSync(p)) return { preamble: null, sections: {} };
+  const j = JSON.parse(fs.readFileSync(p, 'utf-8'));
+  return { preamble: j.preamble || null, sections: j.sections || {} };
+}
+const APP_BODY = { en: loadAppBody('en'), fr: loadAppBody('fr') };
+
 const partsTr = {
   'I': { en: { title: 'Before we start' }, fr: { title: 'Avant de commencer' } },
   'II': { en: { title: 'Foundations of multiplicative thinking' }, fr: { title: 'Fondements de la pensée multiplicative' } },
@@ -110,24 +128,36 @@ const summaryTr = {
 };
 
 function buildLangManuale(lang) {
-  const out = { preamble: MANUALE.preamble, parts: [] };
+  const body = BODY[lang] || { preamble: null, parts: {}, chapters: {} };
+  const out = {
+    preamble: body.preamble || MANUALE.preamble,
+    preamble_translated: !!body.preamble,
+    parts: [],
+  };
   for (const p of MANUALE.parts) {
     const tr = (partsTr[p.roman] || {})[lang] || {};
+    const bodyPart = body.parts[p.roman] || {};
+    const intro = bodyPart.intro != null ? bodyPart.intro : p.intro;
     const pp = {
       id: p.id,
       roman: p.roman,
       title: tr.title || p.title,
       title_it: p.title,
-      intro: p.intro,
-      chapters: p.chapters.map(c => ({
-        id: c.id,
-        number: c.number,
-        slug: c.slug,
-        title: (chapterTr[c.number] || {})[lang] || c.title,
-        title_it: c.title,
-        summary: (summaryTr[c.number] || {})[lang] || '',
-        content: c.content,
-      })),
+      intro,
+      intro_translated: bodyPart.intro != null,
+      chapters: p.chapters.map(c => {
+        const translatedContent = body.chapters[c.number];
+        return {
+          id: c.id,
+          number: c.number,
+          slug: c.slug,
+          title: (chapterTr[c.number] || {})[lang] || c.title,
+          title_it: c.title,
+          summary: (summaryTr[c.number] || {})[lang] || '',
+          content: translatedContent != null ? translatedContent : c.content,
+          content_translated: translatedContent != null,
+        };
+      }),
     };
     out.parts.push(pp);
   }
@@ -135,17 +165,23 @@ function buildLangManuale(lang) {
 }
 
 function buildLangAppendice(lang) {
+  const body = lang === 'it' ? null : APP_BODY[lang];
   return {
-    preamble: APPENDICE.preamble,
-    sections: APPENDICE.sections.map(s => ({
-      id: s.id,
-      number: s.number,
-      letter: s.letter,
-      slug: s.slug,
-      title: (sectionTr[s.letter] || {})[lang] || s.title,
-      title_it: s.title,
-      content: s.content,
-    })),
+    preamble: (body && body.preamble) ? body.preamble : APPENDICE.preamble,
+    preamble_translated: !!(body && body.preamble),
+    sections: APPENDICE.sections.map(s => {
+      const translatedContent = body ? body.sections[s.number] : null;
+      return {
+        id: s.id,
+        number: s.number,
+        letter: s.letter,
+        slug: s.slug,
+        title: (sectionTr[s.letter] || {})[lang] || s.title,
+        title_it: s.title,
+        content: translatedContent != null ? translatedContent : s.content,
+        content_translated: translatedContent != null,
+      };
+    }),
   };
 }
 

@@ -12,9 +12,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Quicksand:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/css/app.css" />
+
+  <!-- Preload the small datasets the boot path always needs (default locale = it). -->
+  <link rel="preload" as="fetch" href="/i18n/it.json" crossorigin />
+  <link rel="preload" as="fetch" href="/data/tecniche.json" crossorigin />
+  <link rel="preload" as="fetch" href="/data/gallery.json" crossorigin />
 </head>
 <body>
   <div id="app"></div>

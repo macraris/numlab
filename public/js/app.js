@@ -7,15 +7,20 @@
 
 const STORE_KEY = 'pina-progress-v1';
 const LANG_KEY  = 'pina-lang-v1';
+const PYTHON_CHAPTERS_TOTAL = 42;
 
 const App = {
   lang: 'it',
   i18n: null,
   manuale: null,
   appendice: null,
+  manualeMath: null,
+  appendiceMath: null,
   tecniche: null,
   gallery: null,
   progress: loadProgress(),
+  // Per-language caches so we never re-fetch a dataset once loaded.
+  _cache: { i18n: {}, manuale: {}, appendice: {}, manualeMath: {}, appendiceMath: {} },
 
   async init() {
     // 1) ?lang=xx URL override (useful for testing & shareable links).
@@ -35,7 +40,8 @@ const App = {
     }
     document.documentElement.lang = this.lang;
 
-    // Preload UI translations + tecniche + gallery (small)
+    // Load only the small UI translations + tecniche + gallery at boot.
+    // Manuale/appendice JSON (the heavy ones) are now loaded on demand.
     await this.loadLang(this.lang);
     await Promise.all([
       this.loadTecniche(),
@@ -66,31 +72,65 @@ const App = {
   },
 
   async loadLang(lang) {
-    const r = await fetch(`/i18n/${lang}.json`);
-    this.i18n = await r.json();
+    if (!this._cache.i18n[lang]) {
+      const r = await fetch(`/i18n/${lang}.json`);
+      this._cache.i18n[lang] = await r.json();
+    }
+    this.i18n = this._cache.i18n[lang];
     this.lang = lang;
     document.documentElement.lang = lang;
     localStorage.setItem(LANG_KEY, lang);
-    // Pre-load manuale + appendice in the chosen language (cached after first)
-    const [m, a, mm, am] = await Promise.all([
-      fetch(`/data/manuale.${lang}.json`).then(r => r.json()),
-      fetch(`/data/appendice.${lang}.json`).then(r => r.json()),
-      fetch(`/data/manuale_math.${lang}.json`).then(r => r.json()),
-      fetch(`/data/appendice_math.${lang}.json`).then(r => r.json()),
-    ]);
-    this.manuale = m;
-    this.appendice = a;
-    this.manualeMath = mm;
-    this.appendiceMath = am;
+    // Reset pointers to the heavy datasets so a view that needs one will fetch it.
+    this.manuale = this._cache.manuale[lang] || null;
+    this.appendice = this._cache.appendice[lang] || null;
+    this.manualeMath = this._cache.manualeMath[lang] || null;
+    this.appendiceMath = this._cache.appendiceMath[lang] || null;
+  },
+
+  async ensureManuale() {
+    const lang = this.lang;
+    if (!this._cache.manuale[lang]) {
+      const r = await fetch(`/data/manuale.${lang}.json`);
+      this._cache.manuale[lang] = await r.json();
+    }
+    this.manuale = this._cache.manuale[lang];
+  },
+  async ensureAppendice() {
+    const lang = this.lang;
+    if (!this._cache.appendice[lang]) {
+      const r = await fetch(`/data/appendice.${lang}.json`);
+      this._cache.appendice[lang] = await r.json();
+    }
+    this.appendice = this._cache.appendice[lang];
+  },
+  async ensureManualeMath() {
+    const lang = this.lang;
+    if (!this._cache.manualeMath[lang]) {
+      const r = await fetch(`/data/manuale_math.${lang}.json`);
+      this._cache.manualeMath[lang] = await r.json();
+    }
+    this.manualeMath = this._cache.manualeMath[lang];
+  },
+  async ensureAppendiceMath() {
+    const lang = this.lang;
+    if (!this._cache.appendiceMath[lang]) {
+      const r = await fetch(`/data/appendice_math.${lang}.json`);
+      this._cache.appendiceMath[lang] = await r.json();
+    }
+    this.appendiceMath = this._cache.appendiceMath[lang];
   },
 
   async loadTecniche() {
-    const r = await fetch('/data/tecniche.json');
-    this.tecniche = await r.json();
+    if (!this.tecniche) {
+      const r = await fetch('/data/tecniche.json');
+      this.tecniche = await r.json();
+    }
   },
   async loadGallery() {
-    const r = await fetch('/data/gallery.json');
-    this.gallery = await r.json();
+    if (!this.gallery) {
+      const r = await fetch('/data/gallery.json');
+      this.gallery = await r.json();
+    }
   },
 
   t(path) {
@@ -98,12 +138,26 @@ const App = {
   },
 
   /* --------------------------- Routing --------------------------- */
-  route() {
+  async route() {
     const hash = (location.hash || '#/').replace(/^#/, '') || '/';
     const parts = hash.split('/').filter(Boolean);
     const main = document.getElementById('main');
-    main.scrollTop = 0;
+    if (main) main.scrollTop = 0;
     window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Decide which heavy datasets this route needs and load them in parallel.
+    const needs = [];
+    if (parts[0] === 'python')            needs.push('manuale');
+    if (parts[0] === 'math' && parts[1] === 'manuale')   needs.push('manualeMath');
+    if (parts[0] === 'math' && parts[1] === 'appendice') needs.push('appendiceMath');
+    if (parts[0] === 'exercises')         needs.push('appendice');
+    if (parts[0] === 'progress')          needs.push('manuale', 'appendice');
+    const jobs = [];
+    if (needs.includes('manuale'))        jobs.push(this.ensureManuale());
+    if (needs.includes('appendice'))      jobs.push(this.ensureAppendice());
+    if (needs.includes('manualeMath'))    jobs.push(this.ensureManualeMath());
+    if (needs.includes('appendiceMath'))  jobs.push(this.ensureAppendiceMath());
+    if (jobs.length) await Promise.all(jobs);
 
     if (parts.length === 0) return this.viewHome();
     if (parts[0] === 'math') {
@@ -406,7 +460,9 @@ const App = {
   /* --------------------------- Views --------------------------- */
   viewHome() {
     const t = (k) => this.t(k);
-    const totalChapters = this.manuale.parts.reduce((s, p) => s + p.chapters.length, 0);
+    // Hardcoded so the home doesn't have to fetch the 150KB manuale.json just to show stats.
+    // If chapter count changes, update PYTHON_CHAPTERS_TOTAL.
+    const totalChapters = PYTHON_CHAPTERS_TOTAL;
     const totalTechniques = this.tecniche.techniques.length;
     const totalChallenges = 50;
     const totalExamples = this.gallery.items.length;
@@ -504,7 +560,7 @@ const App = {
               <a class="btn btn-primary" href="#/math/manuale">${t('math.manuale_card_cta')} →</a>
               <a class="btn btn-ghost" href="#/math/appendice" style="margin-left:8px;">${t('math.appendice_card_cta')} →</a>
             </div>
-            <img src="/assets/tecniche/05_pitagorica_colorata.png" alt="Tavola pitagorica colorata" loading="lazy">
+            <img src="/assets/tecniche/${this.lang}/05_pitagorica_colorata.png" alt="${esc(t('math.manuale_card_title'))}" loading="lazy">
           </div>
         </div>
       </section>
@@ -533,7 +589,7 @@ const App = {
               const visited = this.progress.techniques.includes(tk.id);
               return `
                 <a class="card tech-card" href="#/math/tecnica/${tk.slug}">
-                  <img class="card-thumb" src="/assets/tecniche/${tk.img}" alt="${esc(data.title)}" loading="lazy">
+                  <img class="card-thumb" src="/assets/tecniche/${this.lang}/${tk.img}" alt="${esc(data.title)}" loading="lazy">
                   <span class="card-emoji">${tk.emoji || '✨'}</span>
                   <h3 class="card-title">${esc(data.title)}${visited ? ' ⭐' : ''}</h3>
                   <p class="card-desc">${esc(data.summary)}</p>
@@ -557,7 +613,7 @@ const App = {
       <div class="container">
         <nav class="breadcrumb"><a href="#/math">${t('math.title')}</a> · ${esc(data.title)}</nav>
         <article class="technique-hero">
-          <img src="/assets/tecniche/${tech.img}" alt="${esc(data.title)}" data-lightbox="/assets/tecniche/${tech.img}" data-caption="${esc(data.title)}">
+          <img src="/assets/tecniche/${this.lang}/${tech.img}" alt="${esc(data.title)}" data-lightbox="/assets/tecniche/${this.lang}/${tech.img}" data-caption="${esc(data.title)}">
           <div>
             <span class="eyebrow">${tech.emoji || '✨'} ${(tech.tags || []).join(' · ')}</span>
             <h1>${esc(data.title)}</h1>
@@ -681,9 +737,10 @@ const App = {
     const next = idx < flat.length - 1 ? flat[idx + 1] : null;
     if (!this.progress.mathChapters) this.progress.mathChapters = [];
     const done = this.progress.mathChapters.includes(num);
-    const isTranslated = this.lang !== 'it';
+    // Show the banner only when we're displaying the Italian fallback in another language.
+    const showTranslationBanner = this.lang !== 'it' && !chapter.content_translated;
 
-    const bodyHTML = window.renderMarkdown(chapter.content || '');
+    const bodyHTML = localizeImages(window.renderMarkdown(chapter.content || ''), this.lang);
 
     const html = `
       <div class="container">
@@ -706,7 +763,7 @@ const App = {
             </button>
           </div>
         </header>
-        ${isTranslated ? `<div class="translation-banner">💡 ${t('python.translation_note')}</div>` : ''}
+        ${showTranslationBanner ? `<div class="translation-banner">💡 ${t('python.translation_note')}</div>` : ''}
         <article class="chapter-body">${bodyHTML}</article>
         <nav class="chap-nav">
           <a class="btn btn-ghost ${prev ? '' : 'disabled'}" ${prev ? `href="#/math/manuale/cap/${prev.chapter.number}"` : ''}>${t('python.previous')}</a>
@@ -769,7 +826,7 @@ const App = {
     const prev = idx > 0 ? sections[idx - 1] : null;
     const next = idx < sections.length - 1 ? sections[idx + 1] : null;
     const isTranslated = this.lang !== 'it';
-    const bodyHTML = window.renderMarkdown(section.content || '');
+    const bodyHTML = localizeImages(window.renderMarkdown(section.content || ''), this.lang);
     const html = `
       <div class="container">
         <nav class="breadcrumb">
@@ -812,7 +869,8 @@ const App = {
     const prev = idx > 0 ? flat[idx - 1] : null;
     const next = idx < flat.length - 1 ? flat[idx + 1] : null;
     const done = this.progress.chapters.includes(num);
-    const isTranslated = this.lang !== 'it';
+    // Banner shown only when displaying the Italian fallback in another language.
+    const showTranslationBanner = this.lang !== 'it' && !chapter.content_translated;
 
     // Render chapter body (markdown -> HTML)
     const bodyHTML = window.renderMarkdown(chapter.content || '');
@@ -838,7 +896,7 @@ const App = {
             </button>
           </div>
         </header>
-        ${isTranslated ? `<div class="translation-banner">💡 ${t('python.translation_note')}</div>` : ''}
+        ${showTranslationBanner ? `<div class="translation-banner">💡 ${t('python.translation_note')}</div>` : ''}
         <article class="chapter-body">${bodyHTML}</article>
         <nav class="chap-nav">
           <a class="btn btn-ghost ${prev ? '' : 'disabled'}" ${prev ? `href="#/python/cap/${prev.chapter.number}"` : ''}>${t('python.previous')}</a>
@@ -939,7 +997,7 @@ const App = {
           </div>
           <h1>${esc(sec.title)}</h1>
         </header>
-        ${this.lang !== 'it' ? `<div class="translation-banner">💡 ${t('python.translation_note')}</div>` : ''}
+        ${this.lang !== 'it' && !sec.content_translated ? `<div class="translation-banner">💡 ${t('python.translation_note')}</div>` : ''}
         <article class="exercise-body chapter-body">${bodyHTML}</article>
         <div class="chap-nav mt-2">
           <a class="btn btn-ghost" href="#/exercises">← ${t('exercises.back_to_index')}</a>
@@ -1096,6 +1154,11 @@ function esc(s) {
     .replace(/"/g,'&quot;');
 }
 function stripBlock(s) { return s.replace(/^>\s?/gm, '').replace(/\*([^*]+)\*/g, '$1'); }
+// Rewrite `/assets/tecniche/NN_xxx.png` (bare, in markdown-rendered content) to the
+// per-language path. Skip references that are already lang-prefixed.
+function localizeImages(html, lang) {
+  return html.replace(/\/assets\/tecniche\/(?!it\/|en\/|fr\/)([^"')\s]+)/g, `/assets/tecniche/${lang}/$1`);
+}
 function sectionEmoji(n) {
   return ['📖','⭐','💡','🐛','🖨️','📊','📕','🌍','👨‍👩‍👧','🗺️','🌐','🎨','📚','🗺️','💬'][n] || '✨';
 }

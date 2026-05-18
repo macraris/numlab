@@ -18,6 +18,18 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# i18n + dataset JSON: revalidate cheaply (must-revalidate keeps the file
+# but checks freshness so a content update is picked up without a hard reload).
+[[headers]]
+  for = "/i18n/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
 [[redirects]]
   from   = "/index"
   to     = "/"

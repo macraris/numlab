@@ -12,6 +12,22 @@ const ROOT = path.resolve(__dirname, '..');
 const MANUALE = JSON.parse(fs.readFileSync(path.join(ROOT, 'public', 'data', 'manuale.json'), 'utf-8'));
 const APPENDICE = JSON.parse(fs.readFileSync(path.join(ROOT, 'public', 'data', 'appendice.json'), 'utf-8'));
 
+// Optional body translations live in scripts/translations/. Missing file = no overrides.
+function loadBody(lang) {
+  const p = path.join(__dirname, 'translations', `manuale_body.${lang}.json`);
+  if (!fs.existsSync(p)) return { preamble: null, parts: {}, chapters: {} };
+  const j = JSON.parse(fs.readFileSync(p, 'utf-8'));
+  return { preamble: j.preamble || null, parts: j.parts || {}, chapters: j.chapters || {} };
+}
+function loadApp(lang) {
+  const p = path.join(__dirname, 'translations', `appendice_body.${lang}.json`);
+  if (!fs.existsSync(p)) return { preamble: null, sections: {} };
+  const j = JSON.parse(fs.readFileSync(p, 'utf-8'));
+  return { preamble: j.preamble || null, sections: j.sections || {} };
+}
+const BODY = { en: loadBody('en'), fr: loadBody('fr') };
+const APP_BODY = { en: loadApp('en'), fr: loadApp('fr') };
+
 // --- Manuale: Part titles ---
 const partsTr = {
   'I': {
@@ -292,41 +308,56 @@ const sectionTr = {
   14: { en: 'Sentences you will remember forever', fr: 'Phrases que tu retiendras toujours' },
 };
 
-// Build manuale.it / manuale.en / manuale.fr (overlays add titles+summaries to keep body intact)
+// Build manuale.it / manuale.en / manuale.fr (overlays add titles+summaries; body translated when available)
 function buildVariant(lang) {
+  const body = lang === 'it' ? null : BODY[lang];
   const parts = MANUALE.parts.map(part => {
     const tr = partsTr[part.roman];
+    const bodyPart = body ? (body.parts[part.roman] || {}) : {};
+    const intro = bodyPart.intro != null
+      ? bodyPart.intro
+      : (lang === 'it' ? part.intro : (tr ? `> ${tr[lang].intro}` : part.intro));
     const chapters = part.chapters.map(ch => {
       const t = chapterTr[ch.number];
       const sum = chapterSummary[ch.number];
+      const translatedContent = body ? body.chapters[ch.number] : null;
       return {
         ...ch,
         title: lang === 'it' ? ch.title : (t ? t[lang] : ch.title),
         title_it: ch.title,
         summary: lang === 'it' ? '' : (sum ? sum[lang] : ''),
+        content: translatedContent != null ? translatedContent : ch.content,
+        content_translated: translatedContent != null,
       };
     });
     return {
       ...part,
       title: lang === 'it' ? part.title : (tr ? tr[lang].title : part.title),
       title_it: part.title,
-      intro: lang === 'it' ? part.intro : (tr ? `> ${tr[lang].intro}` : part.intro),
+      intro,
+      intro_translated: bodyPart.intro != null,
       chapters,
     };
   });
-  return { preamble: MANUALE.preamble, parts };
+  const preamble = (body && body.preamble) ? body.preamble : MANUALE.preamble;
+  return { preamble, preamble_translated: !!(body && body.preamble), parts };
 }
 
 function buildApp(lang) {
+  const body = lang === 'it' ? null : APP_BODY[lang];
   const sections = APPENDICE.sections.map(s => {
     const tr = sectionTr[s.number];
+    const translatedContent = body ? body.sections[s.number] : null;
     return {
       ...s,
       title: lang === 'it' ? s.title : (tr ? tr[lang] : s.title),
       title_it: s.title,
+      content: translatedContent != null ? translatedContent : s.content,
+      content_translated: translatedContent != null,
     };
   });
-  return { preamble: APPENDICE.preamble, sections };
+  const preamble = (body && body.preamble) ? body.preamble : APPENDICE.preamble;
+  return { preamble, sections };
 }
 
 for (const lang of ['it', 'en', 'fr']) {
